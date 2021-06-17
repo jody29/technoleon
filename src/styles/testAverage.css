@@ -1,0 +1,146 @@
+.testAverage {
+    background-color: #6171A3;
+    width: 28em;
+    border-radius: 2em;
+    padding: .5em 1.5em;
+    margin-top: 0;
+    margin-left: auto;
+    background-image: url('../background_3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 28em;
+}
+
+.testCoach {
+    width: 28em;
+    opacity: 0;
+    height: 28em;
+    padding: .5em 1.5em;
+}
+
+.testAverage section:first-of-type {
+    display: flex;
+    align-items: center;
+    line-height: 0em;
+    margin: .5em 0;
+}
+
+.testAverage section:first-of-type p {
+    margin-left: auto;
+    font-size: .8em;
+    color: white;
+}
+
+.testAverage section:first-of-type p::before {
+    content: '_';
+    color: #253665;
+    border: 1px solid white;
+    background-color: #253665;
+    margin-right: .5em;
+    padding: 0 .5em;
+    border-radius: .3em;
+
+}
+
+.testAverage h2 {
+    color: white;
+    font-size: 1.2em;
+}
+
+.testAverage h2::after {
+    content: '?';
+    background: transparent;
+    margin-left: .7em;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: .1em .4em;
+    font-size: .8em;
+    cursor: pointer;
+}
+
+.progressBars div {
+    position: relative;
+}
+
+.progressBars div span {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.progressBars div span p {
+    margin-bottom: .5em;
+    margin-top: 0;
+    font-size: .9em;
+    color: white;
+}
+
+.progressBars div span p:last-of-type {
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.progressAv {
+    width: 100%;
+    border: 0px solid transparent;
+    height: 2.3em;
+    background: white;
+    margin-bottom: 1em;
+    border-radius: 2em;
+}
+
+.progressAv::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 2em;
+}
+
+.progressAv::-webkit-progress-value  {
+    background: #253665;
+    border-radius: 2em;
+}
+
+.progress {
+    position: absolute;
+    background: transparent;
+    left: .8em;
+    width: 90%;
+    top: 2.2em;
+    height: 1em;
+    border: 0px;
+    border-radius: .5em;
+    z-index: 100;
+}
+
+.progress::-webkit-progress-bar {
+    background: transparent;
+
+}
+
+.progress::-webkit-progress-value {
+    background: #B0D5A0;
+    border-radius: .5em;
+}
+
+.progressLow {
+    position: absolute;
+    background: transparent;
+    left: .8em;
+    width: 90%;
+    top: 2.2em;
+    height: 1em;
+    border: 0px;
+    border-radius: .5em;
+    z-index: 100;
+    border: 0px;
+}
+
+.progressLow::-webkit-progress-bar {
+    background: transparent;
+    border-radius: .5em;
+}
+
+.progressLow::-webkit-progress-value {
+    background: #DC8A85;
+    border-radius: .5em;
+    height: .9em;
+}

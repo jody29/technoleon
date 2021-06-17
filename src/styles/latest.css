@@ -1,0 +1,101 @@
+.latest {
+    background-color: #6171A3;
+    background-image: url('../background_3.png');
+    background-repeat: no-repeat;
+    width: 46%;
+    height: 25em;
+    border-radius: 1em;
+    padding: 0 1em;
+    margin-left: 2em;
+    margin-top: 2em;
+    position: relative;
+}
+
+.upper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.upper ul:first-of-type {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 3em;
+    width: 13em;
+    list-style: none;
+    margin-left: 1.8em;
+}
+
+.upper ul:first-of-type li {
+    font-size: .6em;
+    position: relative;
+    margin-bottom: .5em;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.upper ul:first-of-type li::before {
+    content: '';
+    position: absolute;
+    height: 1.2em;
+    width: 1.5em;
+    left: -2em;
+    border: 1px solid black;
+    border-radius: .4em;
+}
+
+li:first-of-type::before {
+    background-color: #E64E1B;
+}
+
+li:nth-of-type(2)::before {
+    background-color: #DA4C1F;
+}
+
+li:nth-of-type(3)::before {
+    background-color: #C84A25;
+}
+
+li:nth-of-type(4)::before {
+    background-color: #AE4730;
+}
+
+li:nth-of-type(5)::before {
+    background-color: #8F423B;
+}
+
+.upper form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: -1.15em;
+    border-radius: 2em;
+    top: .9em;
+}
+
+.upper form fieldset {
+    outline: none;
+    border: 0;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: -2px 2px 4px rgba(0,0,0,.5);
+    flex-direction: column;
+    border-radius: .5em 0 0 .5em;
+}
+
+.upper form fieldset span {
+    display: flex;
+    align-items: center;
+}
+
+.upper form fieldset label {
+    font-size: .6em;
+    color: white;
+}
+
+#hide {
+    display: none;
+}
+

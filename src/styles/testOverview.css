@@ -1,0 +1,264 @@
+.testOverview {
+    background-color: #6171A3;
+    background-image: url('../background_3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 15em;
+    padding: 1em 1em;
+    border-radius: 2em;
+    margin-left: 2em;
+    margin-right: 4em;
+    margin-top: 0em;
+    margin-bottom: 1.5em;
+    width: 94.5%;
+  }
+  
+  
+  .testOverview div:first-of-type {
+    display: flex;
+    padding: 0;
+    width: 75%;
+    flex-wrap: wrap;
+    border-right: 1px solid white;
+    
+  }
+  
+  .test {
+    background-color: #253665;
+    margin: .5em;
+    display: flex;
+    flex-basis: 8em;
+    padding: .5em .5em;
+    align-items: center;
+    border-radius: 1em;
+    justify-content: left;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+  }
+
+  .hover {
+    height: 10em;
+  }
+  
+  .locked {
+    background-color: #253665;
+    background-image: url('../locked@2x.png');
+    background-repeat: no-repeat;
+    opacity: .5;
+    background-position: center;
+    background-size: 2em;
+    margin: .5em;
+    display: flex;
+    flex-basis: 8em;
+    padding: .5em .5em;
+    align-items: center;
+    border-radius: 1em;
+    justify-content: left;
+    box-shadow: 0px 0px 5px black;
+  }
+  
+  .test img {
+    height: 2em;
+  }
+  
+  .test span {
+    margin-left: 1em;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .test p {
+    font-size: .8em;
+    padding: 0;
+    margin: 1em 0;
+  }
+  
+  .test span p:last-of-type {
+    padding-top: 0;
+    font-weight: bold;
+    line-height: 0;
+  }
+  
+  .leaderBoard {
+    display: flex;
+    flex-direction: column;
+    width: 19em;
+    padding: 0;
+    align-items: center;
+    padding-left: .5em;
+  }
+  
+  /* ul is for the sorting feature above the leaderboard */
+  .leaderBoard ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1em;
+    margin-top: .5em;
+  }
+  
+  .leaderBoard ul li {
+    padding: .5em 1.4em;
+    background-color: #BBC2D7;
+    border-radius: 1em;
+    cursor: pointer;
+  }
+  
+  .leaderBoard ul li a {
+    color: black;
+  }
+  
+  .leaderBoard ul li button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  /* This class is to show the user the current filter they are using for the leaderboard */
+  /* It also shows the user on which page they are "Perfect Choice/Perfect Load" */
+  .active { 
+    background-color: #E64E24!important;
+    color: white;
+  } 
+  
+  .active button {
+    color: white;
+  }
+  
+  /* ol is used for the leaderboard. Thought the number of ol would be inside the padding space, but it's outside of the block.
+  This is why I inserted the number my self. */
+  .leaderBoard ol {
+    list-style: none;
+    padding: 0 1em;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: .5em;
+  }
+  
+  .leaderBoard ol li{
+    width: 100%;
+    margin: .5em 0;
+    padding: .5em;
+    display: flex;
+    background-color: white;
+  }
+  
+  .leaderBoard ol li:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .leaderBoard ol li:nth-of-type(2) {
+    background-color: #E64E24;
+    color: white;
+    font-weight: bold;
+  
+  }
+  
+  .leaderBoard ol li span:first-of-type {
+    margin-right: .5em;
+  }
+  
+  .leaderBoard ol li span:last-of-type {
+    margin-left: auto;
+  }
+
+  .coachBoard {
+    display: flex;
+    flex-direction: column;
+    width: 19em;
+    padding: 0;
+    background-color: #6171A3;
+    background-image: url('../background_3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding-left: .5em;
+    height: 43.5em;
+    margin-bottom: 4em;
+    margin-right: -1em;
+    border-radius: 1em;
+    z-index: 100;
+  }
+
+  .coachBoard ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1em;
+    margin-top: .5em;
+  }
+  
+  .coachBoard ul li {
+    padding: .5em 1.4em;
+    background-color: #BBC2D7;
+    border-radius: 1em;
+    cursor: pointer;
+  }
+  
+  .coachBoard ul li a {
+    color: black;
+  }
+  
+  .coachBoard ul li button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  .coachBoard ol {
+    list-style: none;
+    padding: 0 1em;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: .5em;
+    height: 31em;
+    overflow: scroll;
+  }
+  
+  .coachBoard ol li{
+    width: 100%;
+    margin: .5em 0;
+    padding: .5em;
+    display: flex;
+    background-color: white;
+  }
+
+  .coachBoard ol li span:first-of-type {
+    margin-right: .5em;
+  }
+  
+  .coachBoard ol li span:last-of-type {
+    margin-left: auto;
+    color: #E64E24;
+    font-weight: bold;
+  }
+
+  .coachBoard div:first-of-type {
+    border-right: none;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .3em;
+  }
+
+  .coachBoard div:first-of-type button {
+    width: 100%;
+    background-color: #253665;
+    outline: none;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    padding: 1em 2em;
+    margin: .5em 0;
+    border-radius: 1.5em;
+    box-shadow: 0px 0px 3px black;
+    cursor: pointer;
+  }

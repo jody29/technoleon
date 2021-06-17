@@ -1,0 +1,119 @@
+.advice {
+    background-color: #6171A3;
+    background-image: url('../background_3.png');
+    background-repeat: no-repeat;
+    width: 46%;
+    border-radius: 1em;
+    padding: 0 1em;
+}
+
+.advice div {
+    display: flex;
+    justify-content: center;
+}
+
+.advice div table {
+    width: 50%;
+    text-align: center;
+    height: 10.5em;
+    overflow-y: scroll;
+    border-spacing: 0;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.advice div table:first-of-type {
+    background-color: #B0D5A0;
+    border-radius: 1em 0 0 1em;
+}
+
+.advice div table:last-of-type {
+    background-color: #DC8A85;
+    border-radius: 0 1em 1em 0;
+}
+
+.advice div table:first-of-type th {
+    background-color: #63AC43;
+    border-radius: 1em 0 0 0;
+    width: 19em;
+}
+
+.advice div table:last-of-type th {
+    background-color: #B90D11;
+    border-radius: 0 1em 0 0;
+    width: 19em;
+}
+
+th {
+    font-size: .8em;
+    color: white;
+    padding: .5em;
+    height: 2.5em;
+}
+
+tr + tr {
+    padding: 0;
+    margin: 0;
+}
+
+td {
+    text-align: left;
+    font-size: .7em;
+    padding: 0 1em;
+    height: fit-content;
+}
+
+td:first-of-type {
+    padding: .5em 1em;
+}
+
+table:first-of-type td:last-of-type {
+    border-radius: 0 0 0 1em;
+}
+
+table:last-of-type td:last-of-type {
+    border-radius: 0 0 1em 0;
+}
+
+.coachTest {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding-bottom: 1.5em;
+    margin-top: -1em;
+    height: 40em;
+    overflow: scroll;
+}
+
+.coachTest div {
+    display: flex;
+    width: 49%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.coachTest div h2 {
+    font-size: .8em;
+}
+
+.coachTest div div {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    justify-content: center;
+}
+
+.coachTest div:nth-child(odd) {
+    margin-left: -1em;
+    margin-right: 0;
+}
+
+.coachTest div:nth-child(even) {
+    margin-left: 1em;
+    margin-right: 0;
+}
+

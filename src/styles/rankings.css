@@ -1,0 +1,53 @@
+.rankings {
+    display: flex;
+    margin-left: 2em;
+    width: 95%;
+    overflow-x: scroll;
+}
+
+.rankings div {
+    background-color: #6171A3;
+    margin: 0 1em;
+    height: 30em;
+    padding: .7em;
+    border-radius: 1em;
+}
+
+.rankings div:first-of-type {
+    margin-left: 0;
+}
+
+.rankings div h2 {
+    font-size: 1.2em;
+    color: white;
+}
+
+.rankings div ol {
+    padding: 0;
+    list-style: none;
+    width: 12em;
+    height: 24.8em;
+    overflow-y: scroll;
+}
+
+.rankings div ol li {
+    display: flex;
+    background-color: white;
+    padding: .7em .7em;
+    font-size: .8em;
+    cursor: pointer;
+}
+
+.rankings div ol li + li {
+    margin-top: .5em;
+}
+
+.rankings div ol li span:last-of-type {
+    margin-left: auto;
+    color: #E64E24;
+    font-weight: bold;
+}
+
+.rankings div ol li span:first-of-type {
+    margin-right: .5em;
+}

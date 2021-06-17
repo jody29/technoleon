@@ -1,0 +1,119 @@
+a {
+  text-decoration: none;
+}
+
+/* Everything down here is for the sidebar */
+.sideBar {
+  height: 100vh;
+  width: 11.5em;
+  background-color: #253665;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  background-image: url('../lion.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: 12em 48em;
+}
+
+.profilePic {
+  display: inline-block;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  width: 8em;
+  height: 8em;
+  background-color: #E64E24;
+}
+
+/* .sideBar section:first-of-type::after {
+  content: url('../role_player.png');
+  position: absolute;
+  z-index: 100;
+  top: 7.5em;
+  left: 6em;
+} */
+
+.role {
+  position: absolute;
+  clip-path: none!important;
+  z-index: 100;
+  width: 2.5em!important;
+  top: 7em!important;
+  left: 6em!important;
+}
+
+.profilePic img {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  object-fit: cover;
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  height: 7em;
+  width: 7em;
+  object-position: 50% 0%;
+  outline: 5px solid #E64E24;
+}
+
+.sideBar section:first-of-type {
+  padding-top: 1em;
+}
+
+.sideBar h1 {
+  margin: 0;
+  padding: 1em 0 1.5em;
+  font-size: 1em;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.licences {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.licences a img {
+  width: 3.5em;
+}
+
+.licences a {
+  margin-bottom: 1em;
+}
+
+.licences form {
+  margin-top: auto;
+  margin-bottom: 1.5em;
+}
+
+.licences form button {
+  padding: 0;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+}
+
+.licences form img {
+  padding: 1em;
+  cursor: pointer;
+}
+
+.licences img {
+  height: 3.5em;
+  background-color:#6171A3;
+  border-radius: 50%;
+  padding: .3em;
+  object-fit: contain;
+  box-shadow: 0px 0px 3px white;
+}
+
+.active { 
+  background-color: #E64E24!important;
+  color: white;
+} 
+
+.active button {
+  color: white;
+}
+
+

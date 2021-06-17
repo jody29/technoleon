@@ -1,0 +1,57 @@
+.development {
+    background-color: #6171A3;
+    background-image: url('../background_3.png');
+    background-repeat: no-repeat;
+    width: 46%;
+    height: 25em;
+    border-radius: 1em;
+    padding: 0 1em;
+    margin-left: 2em;
+    margin-top: 2em;
+    position: relative;
+}
+
+.development label {
+    display: flex;
+    align-items: center;
+}
+
+.upper form span label::after {
+    content: '';
+    background-color: #00E6EC;
+    height: .3em;
+    width: 2em;
+    margin-left: .5em;
+}
+
+.upper form span:nth-of-type(2) label::after {
+    background-color: #000000;
+}
+
+.upper form span:nth-of-type(3) label::after {
+    background-color: #F9F900;
+}
+
+.upper form span:nth-of-type(4) label::after {
+    background-color: #FF0000;
+    margin-right: -.3em;
+}
+
+.upper form span:nth-of-type(5) label::after {
+    background-color: #FF00EC;
+}
+
+
+#othTeam {
+    width: 1em;
+    margin: .2em .2em .2em .5em;
+    height: 1em;
+}
+
+#coachDev {
+    margin-top: -25em!important;
+}
+
+#hide {
+    display: none;
+}
