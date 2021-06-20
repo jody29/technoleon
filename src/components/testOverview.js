@@ -179,7 +179,7 @@ export class TestOverview extends React.Component {
             </ol>
 
             <div>
-              <Link to="/">
+              <Link to="/compareplayer">
                 <button>Compare player</button>
               </Link>
               <Link to="/rankings">

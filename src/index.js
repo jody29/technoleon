@@ -41,6 +41,9 @@ import { RighteyeDevelopment } from "./components/RighteyeDevelopment";
 //Player ranking details
 import { PlayerRanking } from "./components/PlayerRanking";
 
+//Compare Player page
+import { ComparePage } from "./components/ComparePage";
+
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -190,6 +193,18 @@ const Rankings = () => {
   );
 };
 
+const ComparePlayer = () => {
+  return (
+    <div className="body">
+      <Link to="/">
+        <p className="back">back</p>
+      </Link>
+      <h1 className="header">Compare player</h1>
+      <ComparePage />
+    </div>
+  );
+};
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -216,6 +231,9 @@ ReactDOM.render(
         <Route exact path="/ballcontrol"></Route>
         <Route exact path="/rankings">
           <Rankings />
+        </Route>
+        <Route exact path="/compareplayer">
+          <ComparePlayer />
         </Route>
       </Switch>
     </Router>

@@ -1,0 +1,189 @@
+.comparePage {
+    margin-left: 2em;
+    display: flex;
+    padding-right: 2em;
+}
+
+.selectPlayer {
+    background-color: #253665;
+    width: fit-content;
+    padding: .5em 1em;
+    height: 25em;
+    border-radius: 1em;
+    
+}
+
+.leftSide {
+    width: 22em;
+}
+
+.comparePage div section div form {
+    list-style: none;
+    height: 20em;
+    overflow-y: scroll;
+    padding: 0;
+    width: 20em;
+}
+
+fieldset {
+    outline: none;
+    border: 0;
+    padding: .5em 0;
+}
+
+.comparePage div section div form label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #3B4B75;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0px 5px 5px black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.comparePage div section div form label + label {
+    margin-top: 1em;
+}
+
+.comparePage div section div form label img {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    width: 4em;
+    margin-right: 1em;
+    height: 4em;
+    object-fit: cover;
+    object-position: 50% -10%;
+}
+
+.hide {
+    display: none;
+}
+
+h2 {
+    color: white;
+    font-size: 1.2em;
+
+} 
+
+input[type='radio']:checked + label {
+    background-color:#6171A3 ;
+}
+
+.compareWith {
+    background-color: #253665;
+    height: 100%;
+    width: 100%;
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 2em;
+}
+
+.selected {
+    background-color: #253665;
+    height: 100%;
+    width: 100%;
+    padding: 1em;
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+.selected p {
+    color: white;
+    margin-left: 1em;
+}
+
+.selected span:first-of-type {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+}
+
+.selected span:first-of-type button {
+    margin-left: auto;
+    width: 1em;
+    font-weight: bold;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 1em;
+    padding: .5em 0 0 0;
+    cursor: pointer;
+}
+
+.selected span:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.selected span img {
+    width: 5em;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    height: 5em;
+    object-fit: cover;
+    object-position: 50% -10%;
+}
+
+.rightSide {
+    background-color: #253665;
+    width: 100%;
+    height: 38.4em;
+    margin-left: 2em;
+    border-radius: 1em;
+}
+
+.pictures {
+    height: 40%;
+    border-radius: 1em 1em 0 0em;
+    background-color: aliceblue;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.pictures div {
+    height: 100%;
+    width: 50%;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(37,54,101,1) 100%);
+}
+
+.pictures div:first-of-type {
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.pictures div:nth-of-type(2) {
+    border-bottom: 1px solid white;
+}
+
+.pictures img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+.playerPic {
+    position: relative;
+}
+
+.playerPic p {
+    position: absolute;
+    bottom: -1em;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 0;
+    line-height: 25em;
+    padding-bottom: 1em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: rgb(2,0,36);
+    font-weight: bold;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 100%);
+}

@@ -10,17 +10,17 @@ export class PlayerRanking extends React.Component {
       {
         test: "average",
         players: [
-          { rank: 1, name: "Dilano Qonquet", score: 81 },
-          { rank: 2, name: "Dilano Qonquet", score: 81 },
-          { rank: 3, name: "Dilano Qonquet", score: 81 },
-          { rank: 4, name: "Dilano Qonquet", score: 81 },
-          { rank: 5, name: "Dilano Qonquet", score: 81 },
-          { rank: 6, name: "Dilano Qonquet", score: 81 },
-          { rank: 7, name: "Dilano Qonquet", score: 81 },
-          { rank: 8, name: "Dilano Qonquet", score: 81 },
-          { rank: 9, name: "Dilano Qonquet", score: 81 },
-          { rank: 10, name: "Dilano Qonquet", score: 81 },
-          { rank: 11, name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
+          { name: "Dilano Qonquet", score: 81 },
         ],
       },
       {
@@ -73,11 +73,12 @@ export class PlayerRanking extends React.Component {
       <div className="rankings">
         {this.rankings.map((test) => (
           <div className="testRank">
+            <div id="hide">{(rank = 0)}</div>
             <h2>{test.test}</h2>
             <ol>
               {test.players.map((player) => (
                 <li>
-                  <span>{player.rank}.</span>
+                  <span>{(rank += 1)}.</span>
                   <span>{player.name}</span>
                   <span>{player.score}</span>
                 </li>
