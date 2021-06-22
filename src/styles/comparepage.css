@@ -187,3 +187,16 @@ input[type='radio']:checked + label {
     font-weight: bold;
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 100%);
 }
+
+.default {
+    object-fit: scale-down!important;
+    padding: .6em .5em;
+    object-position: 40% 20%!important;
+    background-color: #B0D5A0;
+}
+
+.defaultPic {
+    object-fit: scale-down!important;
+    object-position: 50% 40%!important;
+    background-color: #B0D5A0;
+}

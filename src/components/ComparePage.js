@@ -2,10 +2,13 @@ import React from "react";
 import "../styles/comparepage.css";
 
 let selectedPlayer = false;
+let comparePlayer = false;
 
 let selected;
 let picture;
+let pictureRight;
 let index;
+let compared;
 
 export class ComparePage extends React.Component {
   constructor(props) {
@@ -14,6 +17,7 @@ export class ComparePage extends React.Component {
       showMe: true,
       showCompare: false,
       compareFirst: false,
+      compareSecond: false,
     };
     this.selectPlayer = this.selectPlayer.bind(this);
     this.deselectPlayer = this.deselectPlayer.bind(this);
@@ -75,12 +79,28 @@ export class ComparePage extends React.Component {
   deselectPlayer() {
     this.players.splice(index, index - 2, selected);
     selectedPlayer = false;
+    comparePlayer = false;
+    compared = false;
     selected = false;
     picture = false;
-    this.setState({ showMe: true, showCompare: false, compareFirst: false });
+    pictureRight = false;
+    this.setState({
+      showMe: true,
+      showCompare: false,
+      compareFirst: false,
+      compareSecond: false,
+    });
   }
 
-  comparePlayer() {}
+  comparePlayer(e) {
+    comparePlayer = false;
+    pictureRight = false;
+    comparePlayer = e.target.value;
+    this.setState({ compareSecond: true });
+    compared = this.players.find((element) => element.name === comparePlayer);
+    pictureRight = compared.picture;
+    console.log(compared);
+  }
 
   render() {
     return (
@@ -106,8 +126,9 @@ export class ComparePage extends React.Component {
                           src={
                             player.picture !== ""
                               ? player.picture
-                              : "../default_player.png"
+                              : "../default_profile.png"
                           }
+                          className={player.picture !== "" ? "none" : "default"}
                           alt="player"
                         />
                         <p>{player.name}</p>
@@ -124,7 +145,10 @@ export class ComparePage extends React.Component {
                   <button onClick={this.deselectPlayer}>X</button>
                 </span>
                 <span>
-                  <img src={picture ? picture : "../default_profile.png"} />
+                  <img
+                    src={picture ? picture : "../default_profile.png"}
+                    className={picture !== "" ? "none" : "default"}
+                  />
                   <p>{selectedPlayer}</p>
                 </span>
               </div>
@@ -156,6 +180,7 @@ export class ComparePage extends React.Component {
                               ? player.picture
                               : "../default_profile.png"
                           }
+                          className={player.picture !== "" ? "none" : "default"}
                           alt="player"
                         />
                         <p>{player.name}</p>
@@ -176,13 +201,28 @@ export class ComparePage extends React.Component {
               <div className="playerPic">
                 <img
                   src={picture !== "" ? picture : "../default_profile.png"}
+                  className={picture !== "" ? "none" : "defaultPic"}
                   alt="player"
                 />
                 <p>{selectedPlayer}</p>
               </div>
             )}
-
-            <div></div>
+            {!this.state.compareSecond ? (
+              <div></div>
+            ) : (
+              <div className="playerPic">
+                <img
+                  src={
+                    pictureRight !== ""
+                      ? pictureRight
+                      : "../default_profile.png"
+                  }
+                  className={pictureRight !== "" ? "none" : "defaultPic"}
+                  alt="player"
+                />
+                <p>{comparePlayer}</p>
+              </div>
+            )}
           </section>
         </div>
       </div>
