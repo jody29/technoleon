@@ -22,32 +22,45 @@
     color: white;
 }
 
-.rankings div ol {
+.rankings div form {
     padding: 0;
     list-style: none;
     width: 12em;
     height: 24.8em;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.rankings div ol li {
+.rankings div form fieldset label {
     display: flex;
     background-color: white;
     padding: .7em .7em;
     font-size: .8em;
     cursor: pointer;
+    width: 100%;
 }
 
-.rankings div ol li + li {
+.rankings div form fieldset label + label {
     margin-top: .5em;
 }
 
-.rankings div ol li span:last-of-type {
+.rankings div form fieldset label span:last-of-type {
     margin-left: auto;
     color: #E64E24;
     font-weight: bold;
 }
 
-.rankings div ol li span:first-of-type {
+.rankings div form fieldset label span:first-of-type {
     margin-right: .5em;
+}
+
+.radioRank[type='radio']:checked + .rankingLabel {
+    background-color: #E64E24!important;
+    color: white!important;
+}
+
+.radioRank[type='radio']:checked + .rankingLabel span {
+    color: white!important;
 }
