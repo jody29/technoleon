@@ -200,3 +200,137 @@ input[type='radio']:checked + label {
     object-position: 50% 40%!important;
     background-color: #B0D5A0;
 }
+
+#leftResult {
+    transform: scaleX(-1);
+    
+}
+
+.fullTest {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    border-radius: 0 0 1em 1em;
+    height: 23em;
+    
+}
+
+.fullTest ul {
+    height: 23em;
+    list-style: none;
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.fullTest ul:first-of-type {
+    align-items: flex-end;
+}
+
+.fullTest ul:first-of-type li {
+    border-right: 1px solid rgba(250,250,250,.2);
+}
+
+.fullTest ul:nth-of-type(2) li {
+    border-left: 1px solid rgba(250,250,250,.2);
+}
+
+.fullTest ul li {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    border: 1px solid white;
+    position: relative;
+}
+
+.fullTest ul:nth-of-type(2) p {
+    right: 1em;
+}
+
+.fullTest ul li p {
+    position: absolute;
+    z-index: 100;
+    align-items: center;
+    margin-top: 1.6em;
+    margin-left: 1em;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 1px 3px black;
+}
+
+.fullTest ul li progress {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: transparent;
+    padding: 1.2em .5em 1.2em 0;
+}
+
+.fullTest ul li progress::-webkit-progress-value {
+    border-radius: 0em 2em 2em 0em;
+}
+
+.fullTest ul:first-of-type li progress {
+    margin-left: auto;
+    
+}
+
+.testsView {
+    position: absolute;
+    color: white;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: .7em;
+}
+
+.testsView p {
+    height: 100%;
+    font-weight: bold;
+    text-shadow: 0px 1px 3px black;
+}
+
+progress::-webkit-progress-bar {
+    background: transparent;
+}
+
+.green::-webkit-progress-value {
+    background-color: #B0D5A0!important;
+}
+
+.red::-webkit-progress-value {
+    background-color: #DC8A85!important;
+}
+
+.emptyTest {
+    height: 23em;
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    border-radius: 0 0 1em 1em;
+}
+
+.emptyTest li {
+    height: 100%;
+    border: 1px solid white;
+    width: 100%;
+    text-align: center;
+    padding: 1.5em 0;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 1px 3px black;
+}

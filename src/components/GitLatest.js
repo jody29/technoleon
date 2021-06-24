@@ -88,7 +88,7 @@ export class GitLatest extends React.Component {
 
   render() {
     return (
-      <div className="latest" id={role === "coach" ? "hide" : "nonce"}>
+      <div className="latest" id={role === "coach" ? "hide" : "none"}>
         <div className="upper">
           <h2>Latest testresults</h2>
           <ul

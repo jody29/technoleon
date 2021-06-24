@@ -1,8 +1,7 @@
 import React from "react";
 import * as d3 from "d3";
 import "../styles/matchData.css";
-import { arc, max } from "d3";
-import Radar from "react-d3-radar";
+import Plot from "react-plotly.js";
 
 export class MatchData extends React.Component {
   constructor(props) {
@@ -12,11 +11,51 @@ export class MatchData extends React.Component {
     this.passCompletion = React.createRef();
     this.dataset = { speed: 30, highSpeed: 45, sprints: 11 };
     this.runningdata = { distance: 6.6, efd: 4.1 };
-    this.explosivness = {
-      accHigh: 80,
-      turnRight: 70,
-      decHigh: 55,
-      turnLeft: 85,
+    this.data = [
+      {
+        type: "scatterpolar",
+        name: "Explosivness",
+        r: [70, 80, 88, 55],
+        theta: ["Right", "Acc", "Left", "Dec"],
+        fill: "toself",
+        fillcolor: "rgba(230, 78, 27, .5)",
+        mode: "markers",
+        marker: {
+          color: "rgb(230, 78, 27)",
+          opacity: 0.5,
+          size: 2,
+          line: {
+            color: "rgba(20, 78, 27, 1)",
+            width: 2,
+          },
+        },
+      },
+    ];
+    this.layout = {
+      polar: {
+        radialaxis: {
+          visible: true,
+          range: [0, 100],
+        },
+      },
+      autosize: false,
+      width: 270,
+      heigth: 200,
+      margin: {
+        r: 60,
+        l: 60,
+        t: 0,
+        b: 0,
+      },
+      font: {
+        family: "Roboto",
+        size: 10,
+        color: "white",
+      },
+      displayModebar: false,
+      showlegend: false,
+      paper_bgcolor: "rgba(0,0,0,0)",
+      plot_bgcolor: "rgba(0,0,0,0)",
     };
     this.passData = {
       forward: 31,
@@ -285,41 +324,15 @@ export class MatchData extends React.Component {
 
             <p className="distance">{this.runningdata.distance}km</p>
           </a>
-          <a href="#">
+          <a href="#" style={{ position: "relative" }}>
             <h3>Explosiveness</h3>
-            <Radar
-              className="radarGraph"
-              width={500}
-              height={600}
-              padding={0}
-              domainMax={100}
-              highlighted={null}
-              colors={["#000000", "#6f787f"]}
-              style={{
-                backgroundColor: "blue",
-                axisOverreach: 0,
-              }}
-              data={{
-                variables: [
-                  { key: "accelHigh" },
-                  { key: "turnRight" },
-                  { key: "decelHigh" },
-                  { key: "turnLeft" },
-                ],
-                sets: [
-                  {
-                    key: "me",
-                    label: "My Scores",
-                    values: {
-                      accelHigh: this.explosivness.accHigh,
-                      turnRight: this.explosivness.turnRight,
-                      decelHigh: this.explosivness.decHigh,
-                      turnLeft: this.explosivness.turnLeft,
-                    },
-                  },
-                ],
-              }}
-            />
+            <div style={{ position: "absolute", top: -35, left: -30 }}>
+              <Plot
+                data={this.data}
+                layout={this.layout}
+                config={{ displayModeBar: false, responsive: true }}
+              />
+            </div>
           </a>
           <a href="../fst.html">
             <h3>Passing</h3>

@@ -99,3 +99,7 @@ li:nth-of-type(5)::before {
     display: none;
 }
 
+.point path {
+    filter: drop-shadow(4px 6px 3px rgba(50,50,50,.9));
+  }
+

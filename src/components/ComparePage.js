@@ -9,6 +9,8 @@ let picture;
 let pictureRight;
 let index;
 let compared;
+let resultLeft;
+let resultRight;
 
 export class ComparePage extends React.Component {
   constructor(props) {
@@ -22,43 +24,34 @@ export class ComparePage extends React.Component {
     this.selectPlayer = this.selectPlayer.bind(this);
     this.deselectPlayer = this.deselectPlayer.bind(this);
     this.comparePlayer = this.comparePlayer.bind(this);
+    this.tests = [
+      "dribbling",
+      "coördination",
+      "Visual",
+      "Passing",
+      "Positioning",
+    ];
 
     this.players = [
       {
         name: "Desean Wanders",
         picture: "../messi.jpeg",
-        dribbling: "",
-        coördination: "",
-        Visual: "",
-        Passing: "",
-        Positioning: "",
+        results: [100, 85, 24, 67, 57],
       },
       {
         name: "Carmelo Vaarnold",
         picture: "",
-        dribbling: "",
-        coördination: "",
-        Visual: "",
-        Passing: "",
-        Positioning: "",
+        results: [94, 67, 41, 74, 76],
       },
       {
         name: "Genairo Louisa",
         picture: "",
-        dribbling: "",
-        coördination: "",
-        Visual: "",
-        Passing: "",
-        Positioning: "",
+        results: [78, 63, 85, 50, 80],
       },
       {
         name: "Micharo Baarn",
         picture: "",
-        dribbling: "",
-        coördination: "",
-        Visual: "",
-        Passing: "",
-        Positioning: "",
+        results: [55, 75, 60, 74, 44],
       },
     ];
   }
@@ -67,6 +60,7 @@ export class ComparePage extends React.Component {
     selectedPlayer = e.target.value;
     this.setState({ showMe: false, showCompare: true, compareFirst: true });
     selected = this.players.find((element) => element.name === selectedPlayer);
+    resultLeft = selected.results;
     index = this.players.findIndex(function (name) {
       return name === selected;
     });
@@ -98,8 +92,8 @@ export class ComparePage extends React.Component {
     comparePlayer = e.target.value;
     this.setState({ compareSecond: true });
     compared = this.players.find((element) => element.name === comparePlayer);
+    resultRight = compared.results;
     pictureRight = compared.picture;
-    console.log(compared);
   }
 
   render() {
@@ -221,6 +215,64 @@ export class ComparePage extends React.Component {
                   alt="player"
                 />
                 <p>{comparePlayer}</p>
+              </div>
+            )}
+          </section>
+          <section className="stats">
+            {!comparePlayer ? (
+              <ul className="emptyTest">
+                {this.tests.map((test) => (
+                  <li>{test}</li>
+                ))}
+              </ul>
+            ) : (
+              <div className="fullTest">
+                <div className="testsView">
+                  {this.tests.map((tests) => (
+                    <p>{tests}</p>
+                  ))}
+                </div>
+                <ul>
+                  {resultLeft.map((results) => (
+                    <li>
+                      <p>{results}</p>
+                      <progress
+                        value={results}
+                        className={
+                          resultRight[
+                            resultLeft.findIndex(function (result) {
+                              return result === results;
+                            })
+                          ] > results
+                            ? "red"
+                            : "green"
+                        }
+                        id="leftResult"
+                        max="100"
+                      ></progress>
+                    </li>
+                  ))}
+                </ul>
+                <ul>
+                  {resultRight.map((compare) => (
+                    <li>
+                      <progress
+                        value={compare}
+                        className={
+                          resultLeft[
+                            resultRight.findIndex(function (result) {
+                              return result === compare;
+                            })
+                          ] > compare
+                            ? "red"
+                            : "green"
+                        }
+                        max="100"
+                      ></progress>
+                      <p>{compare}</p>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
           </section>

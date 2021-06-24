@@ -21,7 +21,7 @@ export class GitAdvice extends React.Component {
     return (
       <div className="advice">
         <h2>Training advice</h2>
-        {role === "plaer" ? (
+        {role === "player" ? (
           <div>
             <table>
               <tr>

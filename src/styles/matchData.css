@@ -162,29 +162,6 @@
     border-radius: .3em;
 }
 
-.matchData div:first-of-type a:nth-of-type(2) circle {
-    fill-opacity: .4;
-    fill: white;
-    stroke: black;
-    stroke-width: 2px;
-}
-
-.matchData div:first-of-type a:nth-of-type(2) svg text {
-    fill: black;
-    font-size: 1.3em;
-    transform: translate(0,.5em);
-}
-
-.matchData div:first-of-type a:nth-of-type(2) svg path {
-    fill: #E64E24;
-    fill-opacity: .5;
-    stroke: transparent!important;
-}
-
-.matchData div:first-of-type a:nth-of-type(2) svg line {
-    height: 3em;
-}
-
 .legend {
     display: flex;
     justify-content: center!important;
