@@ -47,7 +47,7 @@ import { ComparePage } from "./components/ComparePage";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-export let role = "coach";
+export let role = "player";
 
 const OverviewPage = () => {
   if (role === "player") {
